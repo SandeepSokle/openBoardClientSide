@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/sticky.css">
     <link rel="stylesheet" href="./css/image.css">
-    <link rel="stylesheet" href="./css/hamburger.css">
     <link rel="stylesheet" href="./css/queries.css">
     <link rel="shortcut icon" href="./NewIcons/photo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/hostControlsStyle.css">
@@ -18,11 +17,6 @@
     <!-- canvas Tag -->
     <div class="combined">
         <div class="toolBar">
-            <div class=" hamburger is-active" id="hamburger-1">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
             <div class="tool-panel add-animation">
                 <div class="tool active">
                     <img src="NewIcons/Black_Pencil.svg" class="tool-img " id="pencil-img" alt=""
@@ -85,10 +79,9 @@
 
         <canvas class="board first">
         </canvas>
-        <!-- <div class="hostControls">
-            <button class="permission btn"><span>&#8367</span></button>
-            <button class="stop btn">Stop</button>
-        </div> -->
+
+        <div class="cover"></div>
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js" crossorigin></script>
     <script src="./js/utilities/common.js"></script>

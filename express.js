@@ -21,9 +21,9 @@ io.on("connection", function(socket) {
   socket.on("toolchange", function(tool) {
     socket.broadcast.emit("ontoolchange", tool);
   });
-  socket.on("hamburger", function() {
-    socket.broadcast.emit("onhamburger");
-  });
+  // socket.on("hamburger", function() {
+  //   socket.broadcast.emit("onhamburger");
+  // });
   socket.on("mousedown", function(point) {
     socket.broadcast.emit("onmousedown", point);
   });

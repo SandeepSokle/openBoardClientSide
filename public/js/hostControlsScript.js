@@ -8,6 +8,9 @@ takePermission.addEventListener("click",function(){
   }
 })
 
+let cover = document.querySelector(".cover");
+
+
 
 let annotationBtn2 = document.querySelector(".annotation");
 let toolBarProp = document.querySelector(".toolBar");
@@ -17,9 +20,11 @@ annotationBtn2.addEventListener("click", function (e) {
     if (e.currentTarget.classList.contains("selectAnnotationBtn")) {
       e.currentTarget.classList.remove("selectAnnotationBtn");
       toolBarProp.classList.add("offAnnotationForToolbar");
+      cover.classList.remove("index");
     } else {
       e.currentTarget.classList.add("selectAnnotationBtn");
       toolBarProp.classList.remove("offAnnotationForToolbar");
+      cover.classList.add("index");
     }
   }else{
     alert("Annotation Not Allowed at this Moment:")
@@ -29,9 +34,6 @@ annotationBtn2.addEventListener("click", function (e) {
 annotationBtn2.classList.remove("selectAnnotationBtn");
 toolBarProp.classList.add("offAnnotationForToolbar");
 
-// let stopBtn = document.querySelector(".stop");
-// let body = document.querySelector("body");
-// let permissionBtn = document.querySelector(".permission");
 let className = [
   "first",
   "second",
@@ -83,32 +85,3 @@ colorBtn.addEventListener("click", function (e) {
   clrBoard.classList.add(`${className[idx]}`);
   colorBtn.classList.add(`${className[idx]}`);
 });
-
-//////permission btn working
-// permissionBtn.addEventListener("click", function (e) {
-//   grantPermission();
-//   console.log("ok:");
-//   socket.emit("myclick");
-// });
-
-// function grantPermission() {
-//   let permissionBtn = document.querySelector(".permission");
-//   if (permissionBtn.classList.contains("selectPermissionBtn")) {
-//     permissionBtn.classList.remove("selectPermissionBtn");
-//   } else {
-//     permissionBtn.classList.add("selectPermissionBtn");
-//   }
-// }
-
-////////stop btn working
-// stopBtn.addEventListener("click", function () {
-//   // body.innerHTML = "";
-//   console.log("stop event");
-//   window.location.assign("endingmeeting.html");
-//   socket.emit("stopboard");
-// body.innerHTML=`<div class="meetingEndContainer">
-// <div class="meetingEndPopup">
-//     <span class="endmeetingspan">Meeting Closed</span>
-// </div>
-// </div>`;
-// });

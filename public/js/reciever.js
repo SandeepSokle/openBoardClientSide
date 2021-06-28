@@ -59,6 +59,6 @@ socket.on("onstop", function () {
   window.location.assign("endingmeeting.html");
 });
 
-socket.on("req", function () {
-  confirm("Client Want to Annotate");
-});
+// socket.on("req", function () {
+//   confirm("Client Want to Annotate");
+// });

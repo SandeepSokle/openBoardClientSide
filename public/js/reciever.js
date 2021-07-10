@@ -33,19 +33,15 @@ socket.on("onredo", function () {
   redoMaker();
 });
 
-socket.on("onclick", function () {
+socket.on("onclick1", function () {
   console.log("Hello");
 
   // grantPermission();
   let grantPermission = document.querySelector(".takepermission img");
-  if (grantPermission.classList.contains("selectPermissionBtn")) {
+
     grantPermission.classList.remove("selectPermissionBtn");
     alert("Now you can Not Use Annotation:");
-  } else {
-    grantPermission.classList.add("selectPermissionBtn");
-    alert("Now you can Use Annotation:");
-  }
-
+  
   let cover = document.querySelector(".cover");
   let toolBarProp = document.querySelector(".toolBar");
   let annotationBtn2 = document.querySelector(".annotation");
@@ -54,6 +50,24 @@ socket.on("onclick", function () {
   cover.classList.remove("index");
 });
 
+
+socket.on("onclick2", function () {
+  console.log("Hello");
+
+  // grantPermission();
+  let grantPermission = document.querySelector(".takepermission img");
+
+    grantPermission.classList.add("selectPermissionBtn");
+    alert("Now you can Use Annotation:");
+  
+
+  let cover = document.querySelector(".cover");
+  let toolBarProp = document.querySelector(".toolBar");
+  let annotationBtn2 = document.querySelector(".annotation");
+  annotationBtn2.classList.remove("selectAnnotationBtn");
+  toolBarProp.classList.add("offAnnotationForToolbar");
+  cover.classList.remove("index");
+});
 socket.on("onstop", function () {
   console.log("stop event");
   window.location.assign("endingmeeting.html");
